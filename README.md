@@ -33,9 +33,10 @@ export class CadastroPage {
 
 <h2>💻 Execução Local</h2>
 <p>Crie um arquivo chamado <strong>run-cypress-local.sh</strong> com o conteúdo abaixo:</p>
+
+<h2>🚀 Script de execução Cypress local</h2>
+<p>#!/bin/bash</p>
 <pre><code class="language-bash">
-#!/bin/bash
-# 🚀 Script de execução Cypress local
 
 # Instala as dependências sem opcionais
 npm install --omit=optional
@@ -51,37 +52,6 @@ npx cypress run
 <pre><code class="language-bash">
 chmod +x run-cypress-local.sh
 </code></pre>
-
-<p>E para rodar os testes:</p>
-<pre><code class="language-bash">
-./run-cypress-local.sh
-</code></pre>
-
-<hr>
-
-<h2>💻 Execução Local</h2>
-<p>
-  Crie um arquivo chamado <strong>run-cypress-local.sh</strong> com o conteúdo abaixo:
-</p>
-<pre><code>
-
-
-
-# Instala as dependências sem opcionais
-npm install --omit=optional
-
-# Verifica se o Cypress está corretamente instalado
-npx cypress verify
-
-# Executa todos os testes (headless)
-npx cypress run
-</code></pre>
-
-<p>Dê permissão de execução ao script:</p>
-<pre><code>chmod +x run-cypress-local.sh</code></pre>
-
-<p>Agora execute seus testes com:</p>
-<pre><code>./run-cypress-local.sh</code></pre>
 
 <hr>
 
