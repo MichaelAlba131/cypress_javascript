@@ -1,4 +1,5 @@
 name: Cypress Tests
+
 on: [push]
 
 jobs:
@@ -7,7 +8,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        containers: [1, 2]  # 2 instâncias paralelas
+        containers: [1, 2]  # Dois containers para rodar em paralelo
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -15,9 +16,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18  # ou sua versão preferida
+          node-version: 20
 
-      - name: Cache node modules
+      - name: Cache npm
         uses: actions/cache@v3
         with:
           path: ~/.npm
@@ -28,10 +29,10 @@ jobs:
       - name: Upgrade npm to latest
         run: npm install -g npm@latest
 
-      - name: Install dependencies (no optional to evitar fsevents)
+      - name: Install dependencies (ignore optional to avoid fsevents error)
         run: npm ci --no-optional
 
-      - name: Cypress run
+      - name: Run Cypress tests
         uses: cypress-io/github-action@v6
         with:
           start: npm start
