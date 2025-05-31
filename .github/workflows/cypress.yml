@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install dependencies without optional
-        run: npm install --no-optional
+        run: npm install --omit=optional
 
       - name: Cypress install
         uses: cypress-io/github-action@v6
