@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        containers: [1, 2]  # Dois containers para rodar em paralelo
+        containers: [1, 2]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -29,8 +29,8 @@ jobs:
       - name: Upgrade npm to latest
         run: npm install -g npm@latest
 
-      - name: Install dependencies (ignore optional to avoid fsevents error)
-        run: npm ci --no-optional
+      - name: Install dependencies (omit optional deps)
+        run: npm ci --omit=optional
 
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
