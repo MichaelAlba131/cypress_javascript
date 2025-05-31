@@ -9,6 +9,7 @@ jobs:
       fail-fast: false
       matrix:
         containers: [1, 2]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -29,8 +30,8 @@ jobs:
       - name: Upgrade npm to latest
         run: npm install -g npm@latest
 
-      - name: Install dependencies (omit optional deps)
-        run: npm ci --omit=optional
+      - name: Install dependencies (omit optional deps, force install)
+        run: npm ci --omit=optional --force
 
       - name: Run Cypress tests
         uses: cypress-io/github-action@v6
