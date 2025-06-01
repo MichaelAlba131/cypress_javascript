@@ -1,7 +1,7 @@
 export class Functions {
 
     /**
-     * Método dinâmico para preencher campos em qualquer selector
+     * Metodo dinâmico para preencher campos em qualquer selector
      * @param {string} seletor - Seletor CSS para o campo
      * @param {string} valor - Valor a ser preenchido
      */
@@ -13,7 +13,7 @@ export class Functions {
     }
 
     /**
-     * Método dinâmico para clicar em qualquer elemento via seletor
+     * Metodo dinâmico para clicar em qualquer elemento via seletor
      * @param {string} seletor - Seletor CSS para o elemento
      */
     static clicarElemento(seletor) {
@@ -25,7 +25,7 @@ export class Functions {
     }
 
     /**
-     * Método dinâmico para clicar em um elemento contendo texto específico
+     * Metodo dinâmico para clicar em um elemento contendo texto específico
      * @param {string} seletor - Ex: 'button', 'a', 'div'
      * @param {string} texto - Texto visível
      * @param {object} options - Opções extras do cypress (opcional)
@@ -35,6 +35,11 @@ export class Functions {
             .click({ force: true });
     }
 
+    /**
+     * Preenche um campo de input associado a um label específico
+     * @param {string} label - Texto do label
+     * @param {string} valor - Valor a ser preenchido
+     */
     static preencherCampoPorLabel(label, valor) {
         cy.contains('label', label).then(() => {
             cy.get('label')

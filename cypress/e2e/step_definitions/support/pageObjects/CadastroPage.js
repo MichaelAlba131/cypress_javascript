@@ -1,3 +1,7 @@
 export class CadastroPage {
-    cadastro = 'a.elementor-button';
+    cadastroSelector = 'a.elementor-button';
+
+    cadastro() {
+        return cy.get(this.cadastroSelector);
+    }
 }
