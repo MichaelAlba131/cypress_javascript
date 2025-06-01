@@ -1,4 +1,4 @@
-<h1>🚀 Projeto Cypress BDD + Page Objects + Cypress Cloud</h1>
+<h1>🚀 Projeto Cypress JavaScript BDD + Page Objects + Cypress Cloud</h1>
 
 <h2>🧩 Visão Geral</h2>
 <p>
