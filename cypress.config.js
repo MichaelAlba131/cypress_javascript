@@ -1,3 +1,7 @@
+/**
+ * @license MIT
+ * Copyright (c) 2025 Michael Alba
+ */
 const { defineConfig } = require('cypress');
 const { addCucumberPreprocessorPlugin } = require('@badeball/cypress-cucumber-preprocessor');
 const { createEsbuildPlugin } = require('@badeball/cypress-cucumber-preprocessor/esbuild');

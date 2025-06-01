@@ -66,3 +66,7 @@ npx cypress open
 <p>
   🚨 <strong>Em caso de dúvidas, consulte este README ou abra uma issue. Boas automações!</strong> 🚨
 </p>
+
+## Licença
+Copyright (c) 2025 Michael Alba.
+Todos os direitos reservados.
