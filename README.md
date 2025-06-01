@@ -14,7 +14,6 @@
     <ul>
       <li><code>e2e/</code> ➡️ Features e step-definitions (BDD)</li>
       <li><code>pages/</code> ➡️ Page Objects (mapeamento de páginas/componentes)</li>
-      <li><code>support/</code> ➡️ Hooks globais e comandos customizados do Cypress</li>
     </ul>
   </li>
 </ul>
